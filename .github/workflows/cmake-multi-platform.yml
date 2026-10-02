@@ -1,0 +1,46 @@
+name: CMake on multiple platforms
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure CMake
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+
+      - name: Build both graph implementations
+        run: cmake --build build --config Debug --parallel 2
+
+      - name: Run starter tests (expected to find unimplemented exercises)
+        if: runner.os != 'Windows'
+        shell: bash
+        run: |
+          for executable in obligatorio2_lista obligatorio2_matriz; do
+            if "./build/$executable" --reporter compact; then
+              echo "Expected unfinished starter tests to fail, but they passed."
+              exit 1
+            fi
+          done
+
+      - name: Run starter tests (expected to find unimplemented exercises)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          foreach ($executable in @("obligatorio2_lista.exe", "obligatorio2_matriz.exe")) {
+            & "build/Debug/$executable" --reporter compact
+            if ($LASTEXITCODE -eq 0) {
+              throw "Expected unfinished starter tests to fail, but they passed."
+            }
+          }
