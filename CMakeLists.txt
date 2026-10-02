@@ -15,7 +15,14 @@ set(COMMON_SOURCES
     src/ejercicios/multiset_int.cpp
     src/ejercicios/tabla_int_string.cpp
     src/ejercicios/ejercicios.cpp
-    src/pruebas/pruebas_obligatorio2.cpp
+    src/pruebas/pruebas_pila_int.cpp
+    src/pruebas/pruebas_cola_int.cpp
+    src/pruebas/pruebas_lista_pos_int.cpp
+    src/pruebas/pruebas_multiset_int.cpp
+    src/pruebas/pruebas_tabla_int_string.cpp
+    src/pruebas/pruebas_grafo_int.cpp
+    src/pruebas/pruebas_ejercicios_integrales.cpp
+    src/pruebas/nanobench_impl.cpp
     src/pruebas/mem_tracking_fixture.cpp
     src/reporters/grading_reporter.cpp
     src/reporters/readable_reporter.cpp
