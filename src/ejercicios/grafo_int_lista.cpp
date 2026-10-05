@@ -1,4 +1,4 @@
-#include "GrafoInt.h"
+#include "ejercicios/grafo_int.hpp"
 
 struct _representacionGrafoInt {
     // TODO: Completar

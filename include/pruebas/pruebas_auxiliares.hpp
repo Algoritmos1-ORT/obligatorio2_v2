@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "Ejercicios.h"
+#include "ejercicios/ejercicios.hpp"
 
 namespace pruebas {
 

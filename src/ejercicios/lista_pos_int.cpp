@@ -1,4 +1,4 @@
-#include "ListaPosInt.h"
+#include "ejercicios/lista_pos_int.hpp"
 
 struct _representacionListaPosInt {
     // TODO: Completar

@@ -1,7 +1,7 @@
 #pragma once
 // NOTA: Este archivo no debe ser modificado
 
-#include "Implementaciones.h"
+#include "implementaciones.hpp"
 
 struct _representacionColaInt;
 typedef struct _representacionColaInt* ColaInt;

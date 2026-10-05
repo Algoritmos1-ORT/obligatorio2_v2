@@ -1,4 +1,4 @@
-#include "PilaInt.h"
+#include "ejercicios/pila_int.hpp"
 
 struct _representacionPilaInt {
     // TODO: Completar

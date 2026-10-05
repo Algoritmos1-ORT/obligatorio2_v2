@@ -1,4 +1,4 @@
-#include "TablaIntString.h"
+#include "ejercicios/tabla_int_string.hpp"
 
 struct _representacionTablaIntString {
     // TODO: Completar

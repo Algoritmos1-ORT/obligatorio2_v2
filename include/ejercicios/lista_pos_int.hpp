@@ -1,7 +1,7 @@
 #pragma once
 // NOTA: Este archivo no debe ser modificado
 
-#include "Implementaciones.h"
+#include "implementaciones.hpp"
 
 struct _representacionListaPosInt;
 typedef struct _representacionListaPosInt* ListaPosInt;
