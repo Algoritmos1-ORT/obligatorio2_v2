@@ -51,3 +51,4 @@ jobs:
               throw "Expected exit code 42, got $status."
             }
           }
+          exit 0
