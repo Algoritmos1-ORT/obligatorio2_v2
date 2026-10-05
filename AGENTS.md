@@ -19,4 +19,3 @@ Hay dos roles: estudiantes y docentes. El rol por defecto es estudiante.
 - Configurar y compilar con `cmake -S . -B build` y `cmake --build build`.
 - Los ejecutables `obligatorio2_lista` y `obligatorio2_matriz` deben compilar.
 - Las pruebas se ejecutan con Catch2; las pruebas de memoria usan MemPlumber.
-- Los benchmarks nanobench llevan la etiqueta oculta `[.benchmark]`.

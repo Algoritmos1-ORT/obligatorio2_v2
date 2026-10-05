@@ -32,7 +32,7 @@ TEST_CASE("TablaIntString: agregar, actualizar, borrar y clonar", "[file:tabla]"
     destruir(table);
 }
 
-TEST_CASE("tabla_int_string: operaciones balancean memoria", "[memory][file:tabla]")
+TEST_CASE("TablaIntString: operaciones balancean memoria", "[memory][file:tabla]")
 {
     checkMemoriaEjecucion([] {
         TablaIntString table = crearTablaIntString(1);
@@ -43,19 +43,17 @@ TEST_CASE("tabla_int_string: operaciones balancean memoria", "[memory][file:tabl
     });
 }
 
-TEST_CASE("tabla_int_string: referencias nanobench", "[.benchmark]")
+TEST_CASE("TablaIntString: complejidad", "[benchmark][file:tabla]")
 {
     ankerl::nanobench::Bench tableBench;
     tableBench.output(nullptr).minEpochTime(std::chrono::milliseconds(1));
     for (unsigned int count = 128; count <= 2048; count *= 2)
     {
         TablaIntString table = crearTablaIntString(count);
-        std::vector<std::string> labels;
-        labels.reserve(count);
         for (unsigned int i = 0; i < count; ++i)
         {
-            labels.push_back("value-" + std::to_string(i));
-            agregar(table, static_cast<int>(i), labels.back().c_str());
+            auto value = "value-" + std::to_string(i);
+            agregar(table, static_cast<int>(i), value.c_str());
         }
         tableBench.complexityN(count).run("TablaIntString lookup", [&] {
             ankerl::nanobench::doNotOptimizeAway(recuperar(table, static_cast<int>(count / 2)));
@@ -64,5 +62,5 @@ TEST_CASE("tabla_int_string: referencias nanobench", "[.benchmark]")
     }
     const auto fits = tableBench.complexityBigO();
     REQUIRE_FALSE(fits.empty());
-    CHECK((fits.front().name() == "O(1)" || fits.front().name() == "O(log n)"));
+    CHECK(fits.front().name() == "O(1)");
 }

@@ -28,7 +28,7 @@ TEST_CASE("ListaPosInt: insercion posicional, borrado y clon", "[file:lista]")
     destruir(list);
 }
 
-TEST_CASE("lista_pos_int: operaciones balancean memoria", "[memory][file:lista]")
+TEST_CASE("ListaPosInt: operaciones balancean memoria", "[memory][file:lista]")
 {
     checkMemoriaEjecucion([] {
         ListaPosInt list = crearListaPosInt();
@@ -39,7 +39,7 @@ TEST_CASE("lista_pos_int: operaciones balancean memoria", "[memory][file:lista]"
     });
 }
 
-TEST_CASE("lista_pos_int: referencias nanobench", "[.benchmark]")
+TEST_CASE("ListaPosInt: complejidad", "[benchmark][file:lista]")
 {
     ankerl::nanobench::Bench listBench;
     listBench.output(nullptr).minEpochTime(std::chrono::milliseconds(1));
@@ -56,5 +56,5 @@ TEST_CASE("lista_pos_int: referencias nanobench", "[.benchmark]")
     }
     const auto listFits = listBench.complexityBigO();
     REQUIRE_FALSE(listFits.empty());
-    CHECK((listFits.front().name() == "O(1)" || listFits.front().name() == "O(n)"));
+    CHECK(listFits.front().name() == "O(n)");
 }
