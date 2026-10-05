@@ -51,7 +51,7 @@ TEST_CASE("MultisetInt: frecuencias y operaciones de conjuntos", "[file:multiset
     destruir(left);
 }
 
-TEST_CASE("multiset_int: operaciones balancean memoria", "[memory][file:multiset]")
+TEST_CASE("MultisetInt: operaciones balancean memoria", "[memory][file:multiset]")
 {
     checkMemoriaEjecucion([] {
         MultisetInt values = crearMultisetInt();
@@ -62,7 +62,7 @@ TEST_CASE("multiset_int: operaciones balancean memoria", "[memory][file:multiset
     });
 }
 
-TEST_CASE("multiset_int: referencias nanobench", "[.benchmark]")
+TEST_CASE("MultisetInt: complejidad", "[benchmark][file:multiset]")
 {
     ankerl::nanobench::Bench multisetBench;
     multisetBench.output(nullptr).minEpochTime(std::chrono::milliseconds(1));

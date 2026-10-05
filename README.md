@@ -61,7 +61,7 @@ Para emitir únicamente el porcentaje de pruebas aprobadas:
 Los benchmarks nanobench son ocultos para las ejecuciones normales. Para ejecutarlos explícitamente:
 
 ```sh
-./build/obligatorio2_lista "[.benchmark]"
+./build/obligatorio2_lista "[benchmark]"
 ```
 
 ## Entrega

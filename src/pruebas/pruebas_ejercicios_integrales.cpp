@@ -7,7 +7,7 @@
 
 using namespace pruebas;
 
-TEST_CASE("EstaContenida: respeta multiplicidades y no modifica pilas", "[file:ejercicios]")
+TEST_CASE("PilaInt: EstaContenida respeta multiplicidades y no modifica pilas", "[file:ejercicios]")
 {
     PilaInt required = crearPilaInt();
     PilaInt available = crearPilaInt();
@@ -31,7 +31,7 @@ TEST_CASE("EstaContenida: respeta multiplicidades y no modifica pilas", "[file:e
     destruir(available);
 }
 
-TEST_CASE("EliminarMaximos: elimina todas las apariciones y conserva orden", "[file:ejercicios]")
+TEST_CASE("ColaInt: EliminarMaximos elimina todas las apariciones y conserva orden", "[file:ejercicios]")
 {
     ColaInt queue = crearColaInt();
     enqueueAll(queue, {5, 9, 3, 9, 2, 9, 1});
@@ -45,7 +45,7 @@ TEST_CASE("EliminarMaximos: elimina todas las apariciones y conserva orden", "[f
     destruir(allMaximum);
 }
 
-TEST_CASE("ObtenerRepetidos: devuelve valores repetidos una sola vez", "[file:ejercicios]")
+TEST_CASE("MultisetInt: ObtenerRepetidos devuelve valores repetidos una sola vez", "[file:ejercicios]")
 {
     MultisetInt values = crearMultisetInt();
     agregar(values, 7, 4);
@@ -63,7 +63,7 @@ TEST_CASE("ObtenerRepetidos: devuelve valores repetidos una sola vez", "[file:ej
     destruir(values);
 }
 
-TEST_CASE("RestringirDominio: conserva asociaciones permitidas", "[file:ejercicios]")
+TEST_CASE("TablaIntString: RestringirDominio conserva asociaciones permitidas", "[file:ejercicios]")
 {
     TablaIntString table = crearTablaIntString(4);
     agregar(table, 1, "one");
@@ -82,7 +82,7 @@ TEST_CASE("RestringirDominio: conserva asociaciones permitidas", "[file:ejercici
     destruir(table);
 }
 
-TEST_CASE("RecorridaDFS: visita alcanzables una sola vez sin modificar grafo", "[file:ejercicios][grafo]")
+TEST_CASE("GrafoInt: RecorridaDFS visita alcanzables una sola vez sin modificar grafo", "[file:ejercicios][grafo]")
 {
     GrafoInt graph = crearGrafo(6, true);
     addGraphEdges(graph, {{0, 1}, {0, 2}, {1, 3}, {2, 4}, {4, 1}});

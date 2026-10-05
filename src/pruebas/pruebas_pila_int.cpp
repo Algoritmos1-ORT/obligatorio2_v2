@@ -33,7 +33,7 @@ TEST_CASE("PilaInt: operaciones, clon y liberacion", "[file:pila]")
     destruir(stack);
 }
 
-TEST_CASE("pila_int: operaciones balancean memoria", "[memory][file:pila]")
+TEST_CASE("PilaInt: operaciones balancean memoria", "[memory][file:pila]")
 {
     checkMemoriaEjecucion([] {
         PilaInt stack = crearPilaInt();
@@ -44,7 +44,7 @@ TEST_CASE("pila_int: operaciones balancean memoria", "[memory][file:pila]")
     });
 }
 
-TEST_CASE("pila_int: referencias nanobench", "[.benchmark]")
+TEST_CASE("PilaInt: complejidad", "[benchmark][file:pila]")
 {
     const std::string stackGrowth = measuredGrowth("PilaInt push + pop", [](unsigned int count) {
         PilaInt stack = crearPilaInt();

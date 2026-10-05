@@ -27,7 +27,7 @@ TEST_CASE("ColaInt: operaciones, clon y liberacion", "[file:cola]")
     CHECK(drain(queue) == std::vector<int>{4, -2, 4});
 }
 
-TEST_CASE("cola_int: operaciones balancean memoria", "[memory][file:cola]")
+TEST_CASE("ColaInt: operaciones balancean memoria", "[memory][file:cola]")
 {
     checkMemoriaEjecucion([] {
         ColaInt queue = crearColaInt();
@@ -38,7 +38,7 @@ TEST_CASE("cola_int: operaciones balancean memoria", "[memory][file:cola]")
     });
 }
 
-TEST_CASE("cola_int: referencias nanobench", "[.benchmark]")
+TEST_CASE("ColaInt: complejidad", "[benchmark][file:cola]")
 {
     const std::string queueGrowth = measuredGrowth("ColaInt enqueue + dequeue", [](unsigned int count) {
         ColaInt queue = crearColaInt();

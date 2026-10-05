@@ -32,7 +32,7 @@ TEST_CASE("TablaIntString: agregar, actualizar, borrar y clonar", "[file:tabla]"
     destruir(table);
 }
 
-TEST_CASE("tabla_int_string: operaciones balancean memoria", "[memory][file:tabla]")
+TEST_CASE("TablaIntString: operaciones balancean memoria", "[memory][file:tabla]")
 {
     checkMemoriaEjecucion([] {
         TablaIntString table = crearTablaIntString(1);
@@ -43,7 +43,7 @@ TEST_CASE("tabla_int_string: operaciones balancean memoria", "[memory][file:tabl
     });
 }
 
-TEST_CASE("tabla_int_string: referencias nanobench", "[.benchmark]")
+TEST_CASE("TablaIntString: complejidad", "[benchmark][file:tabla]")
 {
     ankerl::nanobench::Bench tableBench;
     tableBench.output(nullptr).minEpochTime(std::chrono::milliseconds(1));
