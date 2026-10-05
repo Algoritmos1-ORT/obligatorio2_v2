@@ -50,12 +50,10 @@ TEST_CASE("TablaIntString: complejidad", "[benchmark][file:tabla]")
     for (unsigned int count = 128; count <= 2048; count *= 2)
     {
         TablaIntString table = crearTablaIntString(count);
-        std::vector<std::string> labels;
-        labels.reserve(count);
         for (unsigned int i = 0; i < count; ++i)
         {
-            labels.push_back("value-" + std::to_string(i));
-            agregar(table, static_cast<int>(i), labels.back().c_str());
+            auto value = "value-" + std::to_string(i);
+            agregar(table, static_cast<int>(i), value.c_str());
         }
         tableBench.complexityN(count).run("TablaIntString lookup", [&] {
             ankerl::nanobench::doNotOptimizeAway(recuperar(table, static_cast<int>(count / 2)));
