@@ -62,5 +62,5 @@ TEST_CASE("TablaIntString: complejidad", "[benchmark][file:tabla]")
     }
     const auto fits = tableBench.complexityBigO();
     REQUIRE_FALSE(fits.empty());
-    CHECK((fits.front().name() == "O(1)" || fits.front().name() == "O(log n)"));
+    CHECK(fits.front().name() == "O(1)");
 }

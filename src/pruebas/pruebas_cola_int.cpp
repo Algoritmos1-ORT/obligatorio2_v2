@@ -49,5 +49,5 @@ TEST_CASE("ColaInt: complejidad", "[benchmark][file:cola]")
         ankerl::nanobench::doNotOptimizeAway(cantidadElementos(queue));
         destruir(queue);
     });
-    CHECK((queueGrowth == "O(n)" || queueGrowth == "O(1)"));
+    CHECK((queueGrowth == "O(n)"));
 }

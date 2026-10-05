@@ -78,5 +78,5 @@ TEST_CASE("MultisetInt: complejidad", "[benchmark][file:multiset]")
     }
     const auto fits = multisetBench.complexityBigO();
     REQUIRE_FALSE(fits.empty());
-    CHECK((fits.front().name() == "O(1)" || fits.front().name() == "O(log n)"));
+    CHECK(fits.front().name() == "O(log n)");
 }

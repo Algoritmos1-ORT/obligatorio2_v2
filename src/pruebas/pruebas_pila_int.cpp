@@ -55,5 +55,5 @@ TEST_CASE("PilaInt: complejidad", "[benchmark][file:pila]")
         ankerl::nanobench::doNotOptimizeAway(cantidadElementos(stack));
         destruir(stack);
     });
-    CHECK((stackGrowth == "O(n)" || stackGrowth == "O(1)"));
+    CHECK(stackGrowth == "O(n)");
 }
