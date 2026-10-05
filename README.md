@@ -58,12 +58,6 @@ Para emitir únicamente el porcentaje de pruebas aprobadas:
 ./build/obligatorio2_lista --reporter grading
 ```
 
-Los benchmarks nanobench son ocultos para las ejecuciones normales. Para ejecutarlos explícitamente:
-
-```sh
-./build/obligatorio2_lista "[benchmark]"
-```
-
 ## Entrega
 
-Una entrega debe compilar en una copia limpia del proyecto. Entregar únicamente los archivos `.cpp` de `src/ejercicios` asociados a los ejercicios requeridos por el curso; no incluir cambios a headers, pruebas, dependencias ni configuración. Las funciones de los ejercicios 2, 4, 7, 9 y 12 están agrupadas en `ejercicios.cpp`.
+Una entrega debe compilar en una copia limpia del proyecto. Entregar únicamente los archivos `.cpp` de `src/ejercicios` asociados a los ejercicios requeridos por el curso; no hacer cambios a headers, pruebas, dependencias ni configuración. Las funciones de los ejercicios 2, 4, 7, 9 y 12 están agrupadas en `ejercicios.cpp`.

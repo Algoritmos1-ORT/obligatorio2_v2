@@ -43,9 +43,11 @@ jobs:
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
+          $PSNativeCommandUseErrorActionPreference = $false
           foreach ($executable in @("obligatorio2_lista.exe", "obligatorio2_matriz.exe")) {
             & "build/Debug/$executable" --reporter compact
-            if ($LASTEXITCODE -ne 42) {
-              throw "Expected exit code 42, got $LASTEXITCODE."
+            $status = $LASTEXITCODE
+            if ($status -ne 42) {
+              throw "Expected exit code 42, got $status."
             }
           }
