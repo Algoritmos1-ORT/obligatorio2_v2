@@ -1,7 +1,7 @@
 #include "ColaInt.h"
 
 struct _representacionColaInt {
-    int placeholder;
+    // TODO: Completar
 };
 
 ColaInt crearColaInt() {

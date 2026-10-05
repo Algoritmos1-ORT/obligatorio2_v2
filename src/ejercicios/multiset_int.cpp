@@ -1,7 +1,7 @@
 #include "MultisetInt.h"
 
 struct _representacionMultisetInt {
-    int placeholder;
+    // TODO: Completar
 };
 
 MultisetInt crearMultisetInt() {

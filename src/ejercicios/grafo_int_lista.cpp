@@ -1,7 +1,7 @@
 #include "GrafoInt.h"
 
 struct _representacionGrafoInt {
-    int placeholder;
+    // TODO: Completar
 };
 
 GrafoInt crearGrafo(int, bool) {

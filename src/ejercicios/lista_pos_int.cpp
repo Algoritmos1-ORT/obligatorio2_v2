@@ -1,7 +1,7 @@
 #include "ListaPosInt.h"
 
 struct _representacionListaPosInt {
-    int placeholder;
+    // TODO: Completar
 };
 
 ListaPosInt crearListaPosInt() {

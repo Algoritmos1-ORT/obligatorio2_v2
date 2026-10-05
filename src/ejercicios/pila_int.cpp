@@ -1,7 +1,7 @@
 #include "PilaInt.h"
 
 struct _representacionPilaInt {
-    int placeholder;
+    // TODO: Completar
 };
 
 PilaInt crearPilaInt() {
