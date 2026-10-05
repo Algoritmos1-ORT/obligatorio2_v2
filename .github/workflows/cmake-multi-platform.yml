@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Configure CMake
-        run: cmake -S . -B build
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
 
       - name: Build both graph implementations
         run: cmake --build build --config Debug --parallel 2
@@ -31,6 +31,12 @@ jobs:
             if "./build/$executable" --reporter compact; then
               echo "Expected unfinished starter tests to fail, but they passed."
               exit 1
+            else
+              status=$?
+              if [ "$status" -ne 42 ]; then
+                echo "Expected exit code 42, got $status."
+                exit 1
+              fi
             fi
           done
 
@@ -40,7 +46,7 @@ jobs:
         run: |
           foreach ($executable in @("obligatorio2_lista.exe", "obligatorio2_matriz.exe")) {
             & "build/Debug/$executable" --reporter compact
-            if ($LASTEXITCODE -eq 0) {
-              throw "Expected unfinished starter tests to fail, but they passed."
+            if ($LASTEXITCODE -ne 42) {
+              throw "Expected exit code 42, got $LASTEXITCODE."
             }
           }
