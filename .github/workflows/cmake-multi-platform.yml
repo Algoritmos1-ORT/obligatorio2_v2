@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Configure CMake
-        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+        run: cmake -S . -B build
 
       - name: Build both graph implementations
         run: cmake --build build --config Debug --parallel 2
