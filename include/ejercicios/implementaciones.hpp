@@ -1,5 +1,11 @@
 #pragma once
 
+/**
+ * @brief Selecciona la representación de GrafoInt configurada para el build.
+ *
+ * @note Este archivo no debe ser modificado.
+ */
+
 #if defined(GRAFO_INT_LISTA)
 #include "grafo_int_lista.hpp"
 #elif defined(GRAFO_INT_MATRIZ)

@@ -1,5 +1,13 @@
 #pragma once
-// NOTA: Este archivo no debe ser modificado
+
+/**
+ * @brief Consigna 5.
+ *
+ * Implementar ListaPosInt; elemento y cantidadElementos deben ser O(1) en el
+ * peor caso. La especificación no es acotada.
+ *
+ * @note Este archivo no debe ser modificado.
+ */
 
 #include "implementaciones.hpp"
 
