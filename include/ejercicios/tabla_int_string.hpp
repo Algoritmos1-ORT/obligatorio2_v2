@@ -1,7 +1,16 @@
 #pragma once
-// NOTA: Este archivo no debe ser modificado
 
-#include "Implementaciones.h"
+/**
+ * @brief Consigna 8.
+ *
+ * Implementar TablaIntString con hashing abierto; estaDefinida y recuperar
+ * deben ser O(1) en promedio. El tamaño esperado se recibe al crear la tabla,
+ * pero pueden agregarse más elementos.
+ *
+ * @note Este archivo no debe ser modificado.
+ */
+
+#include "implementaciones.hpp"
 
 struct _representacionTablaIntString;
 typedef struct _representacionTablaIntString* TablaIntString;

@@ -1,7 +1,15 @@
 #pragma once
-// NOTA: Este archivo no debe ser modificado
 
-#include "Implementaciones.h"
+/**
+ * @brief Consigna 6.
+ *
+ * Implementar MultisetInt; agregar, borrar y pertenece deben ser O(log n) en
+ * promedio, y cantidadElementos O(1). La especificacion no es acotada.
+ *
+ * @note Este archivo no debe ser modificado.
+ */
+
+#include "implementaciones.hpp"
 
 struct _representacionMultisetInt;
 typedef struct _representacionMultisetInt* MultisetInt;

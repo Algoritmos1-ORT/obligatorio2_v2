@@ -1,4 +1,4 @@
-#include "ColaInt.h"
+#include "ejercicios/cola_int.hpp"
 
 struct _representacionColaInt {
     // TODO: Completar

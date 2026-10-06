@@ -1,7 +1,15 @@
 #pragma once
-// NOTA: Este archivo no debe ser modificado
 
-#include "Implementaciones.h"
+/**
+ * @brief Consignas 10 y 11.
+ *
+ * Implementar GrafoInt con listas de adyacencia y con matrices de adyacencia,
+ * respectivamente. La especificación es acotada en ambos casos.
+ *
+ * @note Este archivo no debe ser modificado.
+ */
+
+#include "implementaciones.hpp"
 
 struct _representacionGrafoInt;
 typedef struct _representacionGrafoInt* GrafoInt;

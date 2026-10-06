@@ -1,4 +1,4 @@
-#include "Ejercicios.h"
+#include "ejercicios/ejercicios.hpp"
 
 bool EstaContenida(PilaInt, PilaInt) {
     throw "NoImplementado";

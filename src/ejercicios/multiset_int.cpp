@@ -1,4 +1,4 @@
-#include "MultisetInt.h"
+#include "ejercicios/multiset_int.hpp"
 
 struct _representacionMultisetInt {
     // TODO: Completar
