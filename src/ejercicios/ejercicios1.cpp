@@ -1,4 +1,4 @@
-#include "ejercicios/ejercicios.hpp"
+#include "ejercicios/ejercicios1.hpp"
 
 bool EstaContenida(PilaInt, PilaInt) {
     throw "NoImplementado";
@@ -9,13 +9,5 @@ void EliminarMaximos(ColaInt&) {
 }
 
 ListaPosInt ObtenerRepetidos(MultisetInt) {
-    throw "NoImplementado";
-}
-
-void RestringirDominio(TablaIntString&, MultisetInt) {
-    throw "NoImplementado";
-}
-
-ColaInt RecorridaDFS(GrafoInt, int) {
     throw "NoImplementado";
 }
