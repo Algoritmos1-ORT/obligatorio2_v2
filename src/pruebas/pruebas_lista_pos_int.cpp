@@ -56,5 +56,5 @@ TEST_CASE("ListaPosInt: complejidad", "[benchmark][file:lista]")
     }
     const auto listFits = listBench.complexityBigO();
     REQUIRE_FALSE(listFits.empty());
-    CHECK(listFits.front().name() == "O(n)");
+    CHECK(listFits.front().name() == "O(1)");
 }
