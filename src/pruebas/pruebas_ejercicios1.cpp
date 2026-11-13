@@ -7,7 +7,7 @@
 
 using namespace pruebas;
 
-TEST_CASE("PilaInt: EstaContenida respeta multiplicidades y no modifica pilas", "[file:ejercicios1]")
+TEST_CASE("PilaInt: EstaContenida respeta multiplicidades y no modifica pilas", "[file:ejercicios1][EstaContenida]")
 {
     PilaInt required = crearPilaInt();
     PilaInt available = crearPilaInt();
@@ -31,7 +31,7 @@ TEST_CASE("PilaInt: EstaContenida respeta multiplicidades y no modifica pilas", 
     destruir(available);
 }
 
-TEST_CASE("ColaInt: EliminarMaximos elimina todas las apariciones y conserva orden", "[file:ejercicios1]")
+TEST_CASE("ColaInt: EliminarMaximos elimina todas las apariciones y conserva orden", "[file:ejercicios1][EliminarMaximos]")
 {
     ColaInt queue = crearColaInt();
     enqueueAll(queue, {5, 9, 3, 9, 2, 9, 1});
@@ -45,7 +45,7 @@ TEST_CASE("ColaInt: EliminarMaximos elimina todas las apariciones y conserva ord
     destruir(allMaximum);
 }
 
-TEST_CASE("MultisetInt: ObtenerRepetidos devuelve valores repetidos una sola vez", "[file:ejercicios1]")
+TEST_CASE("MultisetInt: ObtenerRepetidos devuelve valores repetidos una sola vez", "[file:ejercicios1][ObtenerRepetidos]")
 {
     MultisetInt values = crearMultisetInt();
     agregar(values, 7, 4);

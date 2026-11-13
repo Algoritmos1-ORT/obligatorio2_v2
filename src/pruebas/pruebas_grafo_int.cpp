@@ -8,7 +8,7 @@
 
 using namespace pruebas;
 
-TEST_CASE("GrafoInt: aristas, pesos, vecinos y clon", "[file:grafo]")
+TEST_CASE("GrafoInt: aristas, pesos, vecinos y clon", "[file:grafo_int]")
 {
     GrafoInt graph = crearGrafo(5, true);
     addGraphEdges(graph, {{0, 1}, {0, 3}, {1, 4}});
@@ -35,7 +35,7 @@ TEST_CASE("GrafoInt: aristas, pesos, vecinos y clon", "[file:grafo]")
     destruir(graph);
 }
 
-TEST_CASE("GrafoInt no dirigido: aristas simetricas y eliminacion", "[file:grafo]")
+TEST_CASE("GrafoInt no dirigido: aristas simetricas y eliminacion", "[file:grafo_int]")
 {
     GrafoInt graph = crearGrafo(3, false);
     agregarArista(graph, 0, 2, 6);

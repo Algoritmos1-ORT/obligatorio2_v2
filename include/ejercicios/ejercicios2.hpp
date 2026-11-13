@@ -20,6 +20,11 @@ void RestringirDominio(TablaIntString& t, MultisetInt permitidos);
 
 // PRE: 0 <= origen < cantidadVertices(grafo).
 // POS: retorna una cola con los vértices alcanzables desde origen recorridos
-//      en profundidad. No modifica grafo y funciona con ambas
+//      en profundidad, y de menor a mayor. No modifica grafo, y debe funcionar con ambas
 //      representaciones.
+//      Ejemplo, dado el grafo g:
+//              2 -- 3 -- 5
+//                   |
+//                   4 -- 7
+//      RecorridaDFS(g, 2) == [2, 3, 4, 7, 5]
 ColaInt RecorridaDFS(GrafoInt grafo, int origen);

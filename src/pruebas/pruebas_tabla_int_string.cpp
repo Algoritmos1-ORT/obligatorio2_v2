@@ -9,7 +9,7 @@
 
 using namespace pruebas;
 
-TEST_CASE("TablaIntString: agregar, actualizar, borrar y clonar", "[file:tabla]")
+TEST_CASE("TablaIntString: agregar, actualizar, borrar y clonar", "[file:tabla_int_string]")
 {
     TablaIntString table = crearTablaIntString(2);
     agregar(table, -3, "negative");
@@ -32,7 +32,7 @@ TEST_CASE("TablaIntString: agregar, actualizar, borrar y clonar", "[file:tabla]"
     destruir(table);
 }
 
-TEST_CASE("TablaIntString: operaciones balancean memoria", "[memory][file:tabla]")
+TEST_CASE("TablaIntString: operaciones balancean memoria", "[memory][file:tabla_int_string]")
 {
     checkMemoriaEjecucion([] {
         TablaIntString table = crearTablaIntString(1);
@@ -43,7 +43,7 @@ TEST_CASE("TablaIntString: operaciones balancean memoria", "[memory][file:tabla]
     });
 }
 
-TEST_CASE("TablaIntString: complejidad", "[benchmark][file:tabla]")
+TEST_CASE("TablaIntString: complejidad", "[benchmark][file:tabla_int_string]")
 {
     ankerl::nanobench::Bench tableBench;
     tableBench.output(nullptr).minEpochTime(std::chrono::milliseconds(1));
