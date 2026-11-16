@@ -1,4 +1,6 @@
 #include <algorithm>
+#include <numeric>
+#include <random>
 #include <string>
 #include <vector>
 
@@ -66,11 +68,18 @@ TEST_CASE("MultisetInt: complejidad", "[benchmark][file:multiset]")
 {
     ankerl::nanobench::Bench multisetBench;
     multisetBench.output(nullptr).minEpochTime(std::chrono::milliseconds(1));
+    std::mt19937 randomizador(42);
     for (unsigned int count = 128; count <= 2048; count *= 2)
     {
+        // Evita degenerar un ABB simple con inserciones ordenadas.
+        // La semilla fija permite reproducir el orden de cada medición.
+        std::vector<int> elementos(count);
+        std::iota(elementos.begin(), elementos.end(), 0);
+        std::shuffle(elementos.begin(), elementos.end(), randomizador);
+
         MultisetInt values = crearMultisetInt();
-        for (unsigned int i = 0; i < count; ++i)
-            agregar(values, static_cast<int>(i), 1);
+        for (int elemento : elementos)
+            agregar(values, elemento, 1);
         multisetBench.complexityN(count).run("MultisetInt pertenece", [&] {
             ankerl::nanobench::doNotOptimizeAway(pertenece(values, static_cast<int>(count / 2)));
         });
