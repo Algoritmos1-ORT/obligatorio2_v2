@@ -43,7 +43,7 @@ void borrar(TablaIntString& t, int d);
 
 // PRE: !esVacia()
 // POS: Retorna un dominio cualquiera de la tabla
-//      Complejidad esperada: O(1) peor caso.
+//      
 int elemento(TablaIntString t);
 
 // PRE: -
