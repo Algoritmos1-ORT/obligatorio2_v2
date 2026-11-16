@@ -63,6 +63,13 @@ Para emitir únicamente el porcentaje de pruebas aprobadas:
 ./build/obligatorio2_lista --reporter grading
 ```
 
+## Benchmarks
+
+Hay algunas pruebas que validan que los algoritmos cumplan los ordenes de ejecución pedidos. Estas pruebas llevan el tag `[benchmark]`, y pueden ser quitadas con la negación de un tag: `~[benchmark]`.
+
+> [!NOTE] Importante:
+> El framework utilizado a veces retorna falsos negativos, rechazando algoritmos que funcionan bien. Nuestra recomendación es prestar atención a estas pruebas, pero si se establece que el algoritmo cumple correctamente aunque el benchmark falla, se puede ignorar o quitar su ejecución agregando el tag negado.
+
 ## Entrega
 
 Una entrega debe compilar en una copia limpia del proyecto. Entregar únicamente los archivos `.cpp` de `src/ejercicios` asociados a los ejercicios requeridos por el curso; no hacer cambios a headers, pruebas, dependencias ni configuración.
