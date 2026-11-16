@@ -1,10 +1,7 @@
 #pragma once
 
 /**
- * @brief Consigna 6.
- *
- * Implementar MultisetInt; agregar, borrar y pertenece deben ser O(log n) en
- * promedio, y cantidadElementos O(1). La especificacion no es acotada.
+ * Especificacion no acotada de multiset de enteros.
  *
  * @note Este archivo no debe ser modificado.
  */
@@ -38,7 +35,7 @@ bool pertenece(MultisetInt m, int e);
 MultisetInt unionConjuntos(MultisetInt m1, MultisetInt m2);
 
 // PRE: -
-// POS: Retorna un nuevo multiset que es la intersección de m1 y m2,
+// POS: Retorna un nuevo multiset que es la intersecciï¿½n de m1 y m2,
 //   	 o sea, el conjunto que contiene solo los elementos comunes a m1 y m2     
 //   	 El conjunto retornado no debe compartir memoria con m1 ni m2.
 MultisetInt interseccionConjuntos(MultisetInt m1, MultisetInt m2);

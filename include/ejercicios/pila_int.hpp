@@ -1,10 +1,7 @@
 #pragma once
 
 /**
- * @brief Consigna 1.
- *
- * Implementar PilaInt; push, top, pop y cantidadElementos deben ser O(1) en
- * el peor caso. La especificación no es acotada.
+ * Especificación no acotada de pila de enteros.
  *
  * @note Este archivo no debe ser modificado.
  */
