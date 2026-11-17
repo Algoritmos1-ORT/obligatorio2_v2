@@ -1,10 +1,7 @@
 #pragma once
 
 /**
- * @brief Consigna 5.
- *
- * Implementar ListaPosInt; elemento y cantidadElementos deben ser O(1) en el
- * peor caso. La especificación no es acotada.
+ * Especificación de lista de enteros no acotada con acceso aleatorio.
  *
  * @note Este archivo no debe ser modificado.
  */

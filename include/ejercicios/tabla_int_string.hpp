@@ -1,11 +1,9 @@
 #pragma once
 
 /**
- * @brief Consigna 8.
- *
- * Implementar TablaIntString con hashing abierto; estaDefinida y recuperar
- * deben ser O(1) en promedio. El tamaño esperado se recibe al crear la tabla,
- * pero pueden agregarse más elementos.
+ * Implementación no acotada de tabla mapeando enteros con strings.
+ * Se espera una cantidad aproximada de elementos para facilitar
+ * hacer una implementación eficienciente.
  *
  * @note Este archivo no debe ser modificado.
  */
