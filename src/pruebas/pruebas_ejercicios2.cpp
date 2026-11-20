@@ -7,7 +7,7 @@
 
 using namespace pruebas;
 
-TEST_CASE("TablaIntString: RestringirDominio conserva asociaciones permitidas", "[file:ejercicios2]")
+TEST_CASE("TablaIntString: RestringirDominio conserva asociaciones permitidas", "[file:ejercicios2][RestringirDominio]")
 {
     TablaIntString table = crearTablaIntString(4);
     agregar(table, 1, "one");
@@ -26,7 +26,7 @@ TEST_CASE("TablaIntString: RestringirDominio conserva asociaciones permitidas", 
     destruir(table);
 }
 
-TEST_CASE("GrafoInt: RecorridaDFS visita alcanzables una sola vez sin modificar grafo", "[file:ejercicios2][grafo]")
+TEST_CASE("GrafoInt: RecorridaDFS visita alcanzables una sola vez sin modificar grafo", "[file:ejercicios2][RecorridaDFS]")
 {
     GrafoInt graph = crearGrafo(6, true);
     addGraphEdges(graph, {{0, 1}, {0, 2}, {1, 3}, {2, 4}, {4, 1}});
