@@ -6,6 +6,9 @@
  * @note Este archivo no debe ser modificado.
  */
 
+#include <cstddef>
+#include <cassert>
+
 #include "pila_int.hpp"
 #include "cola_int.hpp"
 #include "lista_pos_int.hpp"
